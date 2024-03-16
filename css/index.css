@@ -1,0 +1,88 @@
+.principal {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin: 12px;
+}
+.fondo {
+  height: 393px;
+  width: 640px;
+  background-image: url(/imagenes/Fondo.jpg);
+  animation: AnimarFondo 5s linear infinite;
+}
+.mario-bross {
+  height: 199px;
+  width: 105px;
+  background-image: url(/imagenes/imgBros.png);
+  margin: 0 auto;
+  position: absolute;
+  left: 20%;
+  bottom: 400px;
+  background-position: -210px 0;
+  animation: correr 1s steps(4) infinite, saltar 0.5s ease-in-out infinite;
+}
+.contenedor2 {
+  background-color: white;
+  text-align: center;
+  top: 50px;
+}
+.escudo {
+  height: 200px;
+  margin-top: 50px;
+  width: 200px;
+  animation: girar 7s infinite linear;
+}
+
+.nombre {
+  font-size: 16px;
+  margin-top: 125px;
+  color: black;
+  opacity: 1;
+  animation: desvanecer 5s linear infinite;
+}
+
+@keyframes correr {
+  0% {
+    background-position: 0px;
+  }
+  100% {
+    background-position: 477px;
+  }
+}
+
+@keyframes saltar {
+  0%,
+  100% {
+    bottom: 395px;
+  }
+  50% {
+    bottom: 425px;
+  }
+}
+
+@keyframes girar {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes AnimarFondo {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -640px 0;
+  }
+}
+
+@keyframes desvanecer {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
